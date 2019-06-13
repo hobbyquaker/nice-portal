@@ -1,0 +1,43 @@
+{
+    "name": "nice-portal",
+    "version": "2.0.2",
+    "description": "dead simple - but nice - portal webpage",
+    "private": true,
+    "author": "Sebastian Raff <hobbyquaker@gmail.com",
+    "license": "MIT",
+    "dependencies": {
+        "@webcomponents/webcomponentsjs": "^2.0.0",
+        "@polymer/app-layout": "^3.0.2",
+        "@polymer/font-roboto": "^3.0.2",
+        "@polymer/iron-icons": "^3.0.1",
+        "@polymer/paper-icon-button": "^3.0.2",
+        "@polymer/paper-input": "^3.0.2",
+        "@polymer/paper-ripple": "^3.0.1",
+        "@polymer/paper-styles": "^3.0.1",
+        "@polymer/polymer": "^3.0.0"
+    },
+    "devDependencies": {
+        "polymer-cli": "^1.9.10",
+        "xo": "^0.24.0"
+    },
+    "xo": {
+        "space": 4,
+        "global": [
+            "window",
+            "document",
+            "fetch"
+        ],
+        "rules": {
+            "import/no-unassigned-import": 0
+        },
+        "ignores": [
+            "dist/*",
+            "build/*"
+        ]
+    },
+    "scripts": {
+        "test": "xo",
+        "lintfix": "xo --fix",
+        "build": "polymer build && mkdir -p dist && tar -czvf dist/nice-portal-${npm_package_version}.tar.gz -C build/default ."
+    }
+}

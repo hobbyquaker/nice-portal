@@ -1,0 +1,6 @@
+{
+  "name": "nice-portal",
+  "short_name": "nice-portal",
+  "start_url": "/",
+  "display": "standalone"
+}

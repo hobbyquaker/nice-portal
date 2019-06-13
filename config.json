@@ -1,0 +1,38 @@
+{
+    "title": "portal",
+    "pages": [
+        {"title": "Services", "tiles": [
+            {"href": "https://wiki", "tags": "wiki", "img": "img/wiki.png"},
+            {"href": "https://musicbox/musicbox_webclient/index.html", "tags": "mopidy mpd musicbox soundcloud mp3 streaming", "img": "img/mopidy.png"},
+            {"href": "http://microserver:32400/web", "tags": "plex tv video streaming", "img": "img/plex.png"},
+            {"href": "https://nextcloud", "tags": "nextcloud file share", "img": "img/nextcloud.png"},
+            {"href": "https://node-red", "title": "Node-RED microserver", "tags": "node-red nodered microserver", "img": "img/node-red.png"},
+            {"href": "https://node-red/ui", "title": "Dashboard microserver", "tags": "node-red nodered microserver ui dashboard", "img": "img/node-red.png"},
+            {"href": "https://microserver/mqtt-admin", "title": "MQTT Admin", "tags": "mqtt admin ui subscribe publish", "img": "img/mqtt-smarthome.png"},
+            {"href": "https://microserver/nagios3", "tags": "nagios monitoring", "img": "img/sblogo.png"},
+            {"href": "https://unifi", "tags": "unifi ubiquiti wifi ap accesspoint", "img": "img/logo-UniFi-1.png"},
+            {"href": "https://git", "title": "Gitea", "tags": "git repository file", "img": "img/gitea-lg.png"},
+            {"href": "https://docker", "tags": "docker registry", "img": "img/docker-c-0e3b80d791.png"},
+            {"href": "https://kibana", "tags": "kibana elk elastic search", "img": "img/kibana.png"},
+            {"href": "https://grafana", "tags": "grafana charts", "img": "img/grafana.png"},
+            {"href": "https://influx", "tags": "influx db database", "img": "img/influxdata.svg"},
+            {"href": "https://motioneye", "tags": "MotionEye camera surveillance", "title": "MotionEye", "img": "img/motioneye-logo.svg"},
+            {"href": "https://octopi", "title": "OctoPrint", "tags": "octo pi printer printing ender 3d", "img": "img/octoprint.png"},
+            {"href": "https://homematic-ccu3/addons/red", "title": "Node-RED CCU3", "tags": "node-red nodered ccu3 redmatic homematic", "img": "img/node-red.png"},
+            {"href": "http://pi-blue:1880", "title": "Node-RED pi-blue", "tags": "node-red nodered pi-blue zigbee", "img": "img/node-red.png"},
+            {"href": "https://homematic-ccu3/addons/red", "title": "Node-RED Testsystem", "tags": "node-red nodered raspi testsystem redmatic homematic", "img": "img/node-red.png"}
+        ]},
+        {"title": "Devices", "tiles": [
+            {"href": "http://hp-photosmart", "title": "HP PhotoSmart", "tags": "printer printing hp photosmart", "img": "img/hp.gif"},
+            {"href": "https://epson-wf2750", "title": "Epson WF2750", "tags": "printer printing epson wf workforce 2750", "img": "img/epson.png"},
+            {"href": "http://SwitchSrv", "title": "SwitchSrv", "tags": "Switchsrv serverraum", "img": "img/longshine.png"},
+            {"href": "http://SwitchWhz", "title": "SwitchWhz", "tags": "SwitchWhz wohnzimmer", "img": "img/netgear.png"},
+            {"href": "http://SwitchHobbyraum", "title": "SwitchHobbyraum", "tags": "SwitchHobbyraum", "img": "img/tplink.png"},
+            {"href": "https://homematic-ccu3", "title": "Homematic CCU3", "tags": "homematic-ccu3", "img": "img/hmip.png"},
+            {"href": "https://homematic-raspi", "title": "Homematic Testsystem", "tags": "homematic-raspi test", "img": "img/hmip.png"},
+            {"href": "http://busch-energymonitor", "title": "EnergyMonitor", "tags": "energymanager smartmeter power", "img": "img/busch.png"},
+            {"href": "https://cam-whz", "title": "360 Cam Wohnzimmer", "tags": "bosch 360 Camera Wohnzimmer surveillance", "img": "img/bosch.png"},
+            {"href": "https://cam-terrasse", "title": "Eyes Cam Terrasse", "tags": "bosch Eyes Camera Terrasse surveillance", "img": "img/bosch.png"}
+        ]}
+    ]
+}
