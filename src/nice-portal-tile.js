@@ -16,7 +16,7 @@ class NicePortalTile extends PolymerElement {
                     border-radius: 2px;
                     @apply --paper-font-common-base;
                     @apply --paper-card;
-                    width: 180px;
+                    width: 169px;
                     height: 112px;
                     margin: 6px;
                     @apply --paper-material-elevation-1;
