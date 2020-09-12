@@ -107,8 +107,8 @@ class NicePortalApp extends PolymerElement {
 
     connectedCallback() {
         super.connectedCallback();
-        fetch('./config.json').then(res => {
-            return res.json();
+        fetch('./config.json').then(result => {
+            return result.json();
         }).then(config => {
             if (config.title) {
                 this.title = config.title;
@@ -234,14 +234,14 @@ class NicePortalApp extends PolymerElement {
         return this._selectDown(inc + 1, nextPage);
     }
 
-    _selectUp(inc = 1, prevPage = false) {
+    _selectUp(inc = 1, previousPage = false) {
         const {page: cpage, tile} = this._getActive();
         if (!tile) {
             this.shadowRoot.querySelector('nice-portal-page').shadowRoot.querySelector('nice-portal-tile').shadowRoot.querySelector('#anchor').focus();
             return true;
         }
 
-        const page = prevPage ? cpage.previousElementSibling : cpage;
+        const page = previousPage ? cpage.previousElementSibling : cpage;
 
         if (!page) {
             return null;
@@ -249,10 +249,10 @@ class NicePortalApp extends PolymerElement {
 
         const {x: cx} = tile.getBoundingClientRect();
 
-        const id = 'tile-' + ((Number((prevPage ? page.shadowRoot.querySelector('nice-portal-tile:last-of-type').id : tile.id).replace('tile-', ''))) - inc);
+        const id = 'tile-' + ((Number((previousPage ? page.shadowRoot.querySelector('nice-portal-tile:last-of-type').id : tile.id).replace('tile-', ''))) - inc);
         const next = page.shadowRoot.querySelector('#' + id);
 
-        if (!next && prevPage) {
+        if (!next && previousPage) {
             return null;
         }
 
@@ -267,7 +267,7 @@ class NicePortalApp extends PolymerElement {
             return true;
         }
 
-        return this._selectUp(inc + 1, prevPage);
+        return this._selectUp(inc + 1, previousPage);
     }
 
     _selectRight() {
@@ -307,21 +307,21 @@ class NicePortalApp extends PolymerElement {
     }
 
     _getActive() {
-        const res = {};
-        this.shadowRoot.querySelectorAll('nice-portal-page').forEach(el => {
-            const a = el.shadowRoot.querySelector('[active]');
-            if (a) {
-                res.page = el;
-                res.tile = a;
+        const result = {};
+        this.shadowRoot.querySelectorAll('nice-portal-page').forEach(element => {
+            const anchor = element.shadowRoot.querySelector('[active]');
+            if (anchor) {
+                result.page = element;
+                result.tile = anchor;
             }
         });
-        return res;
+        return result;
     }
 
-    _searchChanged(val) {
+    _searchChanged(value) {
         this.visibleCount = 0;
         this.data = this.src && this.src.map(page => {
-            const terms = val.toLowerCase().trim().split(' ');
+            const terms = value.toLowerCase().trim().split(' ');
             const tiles = page.tiles.filter(tile => {
                 const tags = tile.tags.toLowerCase();
                 let match = true;

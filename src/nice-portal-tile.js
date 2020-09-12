@@ -100,8 +100,8 @@ class NicePortalTile extends PolymerElement {
         };
     }
 
-    _titleChanged(val) {
-        if (val) {
+    _titleChanged(value) {
+        if (value) {
             this.setAttribute('show-title', true);
         } else {
             this.removeAttribute('show-title');
