@@ -242,6 +242,11 @@ class NicePortalApp extends PolymerElement {
         }
 
         const page = prevPage ? cpage.previousElementSibling : cpage;
+
+        if (!page) {
+            return null;
+        }
+
         const {x: cx} = tile.getBoundingClientRect();
 
         const id = 'tile-' + ((Number((prevPage ? page.shadowRoot.querySelector('nice-portal-tile:last-of-type').id : tile.id).replace('tile-', ''))) - inc);
