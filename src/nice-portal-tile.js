@@ -49,8 +49,14 @@ class NicePortalTile extends PolymerElement {
                 
                 #title {
                     height: 20px;
+                    width: 161px;
+                    padding-left: 4px;
+                    padding-right: 4px;
                     color: var(--paper-grey-400);
                     user-select: none;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
                 }
                 
                 a:link, a:visited, a:hover, a:active {
